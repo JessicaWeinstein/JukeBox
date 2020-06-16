@@ -1,0 +1,46 @@
+body{
+	width: 100%;
+	height:100%;
+	display:flex;
+	justify-content:center;*/
+	align-items: center;
+	background: linear-gradient(to right, #ed7a7a 0%, #d858e6 50%, #00d4ff 100%);
+	margin:0px, auto;
+	/*position: relative;*/
+}
+
+.buttons{
+/*	text-align: center;
+    overflow: auto;*/
+    /*border: 3px solid black;*/*/
+    display: block;
+  	margin: 0px auto;
+ 	padding: 300px 0;*/ 
+ 	/*position: absolute;*/
+}
+
+#previous{
+	 width:95px;
+    height:95px;
+}
+
+#play{
+	 width:100px;
+    height:100px;
+}
+
+#pause{
+	 width:100px;s
+    height:100px;
+}
+
+#stop{
+	 width:90px;
+    height:90px;
+}
+
+#next{
+	 width:100px;
+    height:100px;
+}
+
