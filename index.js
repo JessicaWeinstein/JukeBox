@@ -24,35 +24,39 @@ stopButton.addEventListener("click", stopSong);
 previousButton.addEventListener("click", previousSong);
 nextButton.addEventListener("click", nextSong);
 
-function playSong(){
-	musicPlayer.play();	
-	playButton.src = "icons/play_White_Fill.png";
+function unClickedButton(){
+	playButton.src = "icons/play_White.png";
 	pauseButton.src = "icons/pause_White.png";
 	stopButton.src = "icons/stop_White.png";
 	previousButton.src = "icons/rewind_White.png";
 	nextButton.src = "icons/FF_White.png";
+}
+
+
+function playSong(){
+	unClickedButton();
+	musicPlayer.play();	
+	playButton.src = "icons/play_White_Fill.png";
+	
 }
 
 function pauseSong() {
+	unClickedButton();
 	musicPlayer.pause();
 	pauseButton.src = "icons/pause_White_Fill.png";
-	playButton.src = "icons/play_White.png";
-	stopButton.src = "icons/stop_White.png";
-	previousButton.src = "icons/rewind_White.png";
-	nextButton.src = "icons/FF_White.png";
+	
 }
 
 function stopSong() {
+	unClickedButton();
 	musicPlayer.pause();
 	musicPlayer.currentTime = 0
 	stopButton.src = "icons/stop_White_Fill.png";
-	pauseButton.src = "icons/pause_White.png";
-	playButton.src = "icons/play_White.png";
-	previousButton.src = "icons/rewind_White.png";
-	nextButton.src = "icons/FF_White.png";
+
 }
 
 function previousSong(){
+	unClickedButton();
 	if (i === 0){
 		i = songs.length -1 //last song in array
 	}
@@ -63,13 +67,11 @@ function previousSong(){
 	musicPlayer.play();
 
 	previousButton.src = "icons/rewind_White_Fill.png";
-	stopButton.src = "icons/stop_White.png";
-	pauseButton.src = "icons/pause_White.png";
-	playButton.src = "icons/play_White.png";
-	nextButton.src = "icons/FF_White.png";
+	
 }
 
 function nextSong(){
+	unClickedButton();
 	if (i === songs.length -1){ // sets i to first song if you're on the last song
 		i = 0
 	}
@@ -80,9 +82,6 @@ function nextSong(){
 	musicPlayer.play();
 
 	nextButton.src = "icons/FF_White_Fill.png";
-	stopButton.src = "icons/stop_White.png";
-	pauseButton.src = "icons/pause_White.png";
-	playButton.src = "icons/play_White.png";
-	previousButton.src = "icons/rewind_White.png";
+	
 	
 }

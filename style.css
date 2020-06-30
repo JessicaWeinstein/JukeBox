@@ -12,10 +12,10 @@ body{
 .buttons{
 /*	text-align: center;
     overflow: auto;*/
-    /*border: 3px solid black;*/*/
+    /*border: 3px solid black;*/
     display: block;
   	margin: 0px auto;
- 	padding: 300px 0;*/ 
+ 	padding: 300px 0; 
  	/*position: absolute;*/
 }
 
